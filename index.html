@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ru" id="up">
+<head>
+	<meta charset="UTF-8">
+	<link rel="shortcut icon" href="favicon.ico">
+	<meta http-equiv="Content-Type" content="text/html">
+	<meta name="author" content="Bogdanov D.D.">
+	<meta name="keywords" content="медицина, пациенты, медицинская карточка пациента, медкарта пациента, голосовой ввод">
+	<meta name="description" content="Программа разработана специально для медиков, чтобы им проще было создавать  медицинские карточки пациентов при помощи голосового ввода">
+	<title>MedForms | Карточка пациента</title>
+	<link rel="stylesheet" href="./css/speech-input.css">
+	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="./css/tabs.css">
+</head>
+<body >
+	<header>
+		<img src="img/header.jpg" alt="">
+	</header>
+	<div class="wrapper">
+		<nav>
+			<a href="#win1" class="btn">О приложении</a>
+			<a href="#win2" class="btn">Помощь</a>
+			<a href="#win3" class="btn">Ваш браузер</a>
+		</nav>
+		<noscript>
+			<div class="noscript">
+				<br> упс похоже у вас отключена поддержка javascript. 
+				<br> JavaScript is not work =(
+				<br> Если вы желаете включить javascript, то вам <a href="https://yandex.ru/support/common/browsers-settings/browsers-java-js-settings.html">сюда</a> или <a href="https://ru.wikihow.com/%D0%BE%D1%82%D0%BA%D0%BB%D1%8E%D1%87%D0%B8%D1%82%D1%8C-JavaScript">сюда</a>
+				<p><img class="js" src="./img/js.png" alt=""></p>
+			</div>
+		</noscript>
+		<div id="error" class="error">
+			<p>Извините, на ваш браузер не поддерживает голосовой ввод данных.</p>
+			<p>Функция голосового ввода работает только браузере Chrome.</p>
+			<p>Пожалуйста, установите браузер <a href="https://www.google.com/intl/ru_ALL/chrome/">Chrome</a>, если он у вас не установлен.</p>
+		</div>
+		<h1>Осмотр в стационаре при поступлении</h1>
+		<form class="form-certificate" method="POST" action="#">
+			<div class="tabs">
+				<input type="radio" name="inset" value="" id="tab_1" checked>
+				<label for="tab_1">Персональные данные</label>
+
+				<input type="radio" name="inset" value="" id="tab_2">
+				<label for="tab_2">Жалобы</label>
+
+				<input type="radio" name="inset" value="" id="tab_3">
+				<label for="tab_3">Анамнез болезни</label>
+
+				<input type="radio" name="inset" value="" id="tab_4">
+				<label for="tab_4">Анамнез жизни</label>
+
+				<input type="radio" name="inset" value="" id="tab_5">
+				<label for="tab_5">Анамнез ВТЭ</label>
+
+				<input type="radio" name="inset" value="" id="tab_6">
+				<label for="tab_6">Объективный статус</label>
+
+				<input type="radio" name="inset" value="" id="tab_7">
+				<label for="tab_7">Локальный статус</label>
+
+				<input type="radio" name="inset" value="" id="tab_8">
+				<label for="tab_8">Диагноз при поступлении</label>
+
+				<input type="radio" name="inset" value="" id="tab_9">
+				<label for="tab_9">Обоснование диагноза</label>
+
+				<input type="radio" name="inset" value="" id="tab_10">
+				<label for="tab_10">Диагноз</label>
+
+				<div id="txt_1">
+					<div class="form-certificate__personal-data">
+						<h2>Номер пациента, пол и возраст</h2>
+						<p><input type="text" id="identification" class="speech-input" lang="ru" data-patience="2" placeholder="Номер пациента, пол и возраст" required>
+						<h2>Дата и время осмотра</h2>
+						<p><input type="text" id="dataAndTime" class="speech-input" lang="ru" data-patience="2" placeholder="Дата и время осмотра" required>
+					</div>
+				</div>
+				<div id="txt_2" class="tab">
+					<div class="form-certificate__textareas">
+						<h2>Жалобы</h2>
+						<textarea id="complaints" cols="70" rows="15" class="speech-input" lang="ru" data-patience="2" required></textarea>
+					</div>
+				</div>
+				<div id="txt_3" class="tab">
+					<div class="form-certificate__textareas">
+						<h2>Анамнез болезни</h2>
+						<textarea id="anamnesisDisease" cols="70" rows="15" class="speech-input" lang="ru" data-patience="2" required></textarea>
+					</div>
+				</div>
+				<div id="txt_4" class="tab">
+					<div class="form-certificate__textareas">
+						<h2>Анамнез жизни</h2>
+						<textarea id="anamnesisLife" cols="70" rows="15" class="speech-input" lang="ru" data-patience="2" required></textarea>
+					</div>
+				</div>
+				<div id="txt_5" class="tab">
+					<div class="form-certificate__textareas">
+						<h2>Анамнез ВТЭ</h2>
+						<textarea id="anamnesisVTE" cols="70" rows="15" class="speech-input" lang="ru" data-patience="2" required></textarea>
+					</div>
+				</div>
+				<div id="txt_6" class="tab">
+					<div class="form-certificate__textareas">
+						<h2>Объективный статус</h2>
+						<textarea id="objectiveStatus" cols="70" rows="15" class="speech-input" lang="ru" data-patience="2" required></textarea>
+					</div>
+				</div>
+				<div id="txt_7" class="tab">
+					<div class="form-certificate__textareas">
+						<h2>Локальный статус</h2>
+						<textarea id="localStatus" cols="70" rows="15" class="speech-input" lang="ru" data-patience="2" required></textarea>
+					</div>
+				</div>
+				<div id="txt_8" class="tab">
+					<div class="form-certificate__textareas">
+						<h2>Диагноз при поступлении</h2>
+						<textarea id="diagnosisAdmission" cols="70" rows="15" class="speech-input" lang="ru" data-patience="2" required></textarea>
+					</div>
+				</div>
+				<div id="txt_9" class="tab">
+					<div class="form-certificate__textareas">
+						<h2>Обоснование диагноза</h2>
+						<textarea id="justificationDiagnosis" cols="70" rows="15" class="speech-input" lang="ru" data-patience="2" required></textarea>
+					</div>
+				</div>
+				<div id="txt_10" class="tab">
+					<div class="form-certificate__textareas">
+						<h2>Диагноз</h2>
+						<textarea id="diagnosis" cols="70" rows="15" class="speech-input" lang="ru" data-patience="2" required></textarea>
+					</div>
+				</div>
+			</div>
+			<input type="text" id="nameFile" class="speech-input" lang="ru" data-patience="2" placeholder="Имя файла" required>
+			<button id="btnSaveNDownload" class="btn btn-save">Сохранить данные</button>
+			<button id="btn-reset" type='reset' class="btn btn-reset">Очистить всю форму</button>
+		</form>
+	</div>
+	<div class="dm-overlay" id="win1">
+		<div class="dm-table">
+			<div class="dm-cell">
+				<div class="dm-modal">
+					<a href="#close" class="close"></a>
+					<h3>О приложении</h3>
+					<p>Программа разработана специально для медиков, чтобы им проще было создавать  медицинские карточки пациентов при помощи голосового ввода.</p>
+					<p>Программа разработана студентом ТПУ магистром 2 курса Богдановым Д. Д.</p>
+					<p class="right-p">г. Томск 28.11.2018</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="dm-overlay" id="win2">
+		<div class="dm-table">
+			<div class="dm-cell">
+				<div class="dm-modal">
+					<a href="#close" class="close"></a>
+					<h3>Помощь</h3>
+					<p>Все поля должны быть заполнены данными.</p>
+					<p>Функция голосового ввода работает только в браузере Chrome.</p>
+					<p>Функция голосового ввода не работает в Opere. Проблема описана <a href="http://qaru.site/questions/418051/support-for-the-webkitspeechrecognition-api-in-opera">здесь</a></p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="dm-overlay" id="win3">
+		<div class="dm-table">
+			<div class="dm-cell">
+				<div class="dm-modal">
+					<a href="#close" class="close"></a>
+					<h3>Ваш браузер</h3>
+					<div id="ver" class="ver"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer>
+		<a href="javascript://0" onclick="slowScroll('#up')" id="toTop"><img src="img/icon_top.png" alt=""></a>
+		<div class="copyright">
+			<p><span>Автор проекта:</span> Богданов Д. Д. <span>e-mail: </span><a href="mailto:Danila00000@Gmail.com">Danila00000@Gmail.com</a>
+			<p>© 2018 Все права защищены, MedForms
+		</div>
+	</footer>
+</body>
+	<script src="./js/jquery-3.3.1.min.js"></script>
+	<script src="./js/FileSaver.min.js"></script>
+	<script src="./js/speech-input.js"></script>
+	<script src="./js/main.js"></script>
+	<script src="./js/closing-сonfirmation.js"></script>
+	<script src="js/detect.min.js"></script>
+</html>

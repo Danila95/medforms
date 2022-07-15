@@ -1,0 +1,159 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+@import url("modal-window.css");
+
+body {
+	background: #383131;
+	font-family: "Roboto", sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;     
+}
+.wrapper {
+	display: block;
+	/*width: 360px;*/
+	padding: 3% 0 0;
+	margin-top: 10%;
+}
+.form-certificate {
+	position: relative;
+	z-index: 1;
+	background: #FFFFFF;
+	max-width: 1000px;
+	margin: 0 auto 100px;
+	padding: 10px 45px;
+	text-align: center;
+	box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+.form-certificate input {
+	font-family: "Roboto", sans-serif;
+	outline: 0;
+	background: #f2f2f2;
+	width: 100%;
+	border: 0;
+	margin: 0 0 15px;
+	padding: 15px;
+	box-sizing: border-box;
+	font-size: 14px;
+}
+h1 {
+	text-align: center;
+	color: white;
+}
+.form-certificate p {
+	display: inline;
+}
+.form-certificate h2 {
+	font-family: "Roboto", sans-serif;
+	box-sizing: border-box;
+	font-size: 18px;
+}
+.form-certificate__personal-data {
+	border: 4px double black;
+	border-radius: 5px;
+	padding: 15px;
+	margin: 15px;
+}
+.form-certificate__personal-data h2 {
+	text-align: left;
+}
+.form-certificate__textareas textarea {
+	font-family: "Roboto", sans-serif;
+	outline: 0;
+	background: #f2f2f2;
+	width: 100%;
+	border: 0;
+	margin: 0 0 15px;
+	padding: 15px;
+	box-sizing: border-box;
+	font-size: 14px;
+	resize: none; /* Запрещаем изменять размер */
+	border: 1px solid gray;
+}
+footer {
+	display:inline-block;
+	float:right;
+	width:100%;
+	position: absolute;
+	left: 0;
+	right: 0;
+}
+.copyright {
+	text-align: center;
+	letter-spacing: 1px;
+	padding: 25px 0;
+	background: #222;
+	color: #7a7a7a; 
+	font-size: 12px;
+	height: 60px;
+	width: 100%;
+}
+.copyright span {
+	color: #c5b08d;
+}
+.copyright a {
+	text-decoration: none;
+	color: #7a7a7a;
+}
+a:hover {
+	color: #c5b08d;
+}
+img {
+	position: relative;
+	left: 94%;
+}
+.right-p {
+	float: right;
+}
+.btn-save {
+	margin: 10px;
+	float: none;
+}
+.btn-reset[type=reset] {
+	margin: 10px;
+	float: none;
+}
+.error {
+	display: none;
+	background: white;
+	margin: 5% auto;
+	border: 4px dashed red;
+	text-align: center;
+	width: 45%;
+	padding: 1.5%;
+}
+.noscript {
+	border: 4px dashed red;
+	margin: 20px auto;
+	width: 500px;
+	background: white;
+	text-align: center;
+}
+.noscript img {
+	position: static;
+}
+header img {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin-bottom: 50%;
+}
+nav {
+	margin-bottom: 5%;
+}
+/*Переназначаю некоторые правила в селекторах из файла speech-input.css для корректного отображения*/
+.si-wrapper {
+	display: block !important;
+}
+
+/*переназначение некоторых правил в селекторах для корректного отображения в tabs*/
+
+.tab textarea {
+	padding-right: 25px;
+}
+
+.tab button {
+	top: 3.25px !important;
+	width: 26px !important;
+	height: 26px !important;
+}
